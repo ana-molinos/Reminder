@@ -22,6 +22,7 @@ class SplashViewController: UIViewController {
     } // Chamada após a view do controler ter sido carregada em memória (primeira coisa que aparece)
     
     private func setup(){
+        self.view.backgroundColor = Colors.redBase
         self.view.addSubview(contentView)
         
         setupConstraints()
