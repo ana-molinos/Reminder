@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		E55089A82FE0722F00BEAB1C /* reminder_rocketseat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reminder_rocketseat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E55089A82FE0722F00BEAB1C /* reminder_rocketseat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = reminder_rocketseat.app; path = "/Users/anajm/Documents/swift/reminder_rocketseat/build/Debug-iphoneos/reminder_rocketseat.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -46,16 +46,7 @@
 			isa = PBXGroup;
 			children = (
 				E55089AA2FE0722F00BEAB1C /* reminder_rocketseat */,
-				E55089A92FE0722F00BEAB1C /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		E55089A92FE0722F00BEAB1C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E55089A82FE0722F00BEAB1C /* reminder_rocketseat.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,7 +99,7 @@
 			mainGroup = E550899F2FE0722F00BEAB1C;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = E55089A92FE0722F00BEAB1C /* Products */;
+			productRefGroup = E550899F2FE0722F00BEAB1C;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
