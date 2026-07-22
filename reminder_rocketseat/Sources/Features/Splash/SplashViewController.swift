@@ -44,16 +44,16 @@ class SplashViewController: UIViewController {
     
     private func setupGesture(){
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(showLoginBottomSheet))
-        self.view.addGestureRecognizer(tapGesture)
+        self.view.addGestureRecognizer(tapGesture) // captura o toque em qualquer lugar a tela de splash screen
     }
     
     @objc
-    private func showLoginBottomSheet(){
-        let loginBottomSheet = LoginBottomSheetViewController()
-        loginBottomSheet.modalPresentationStyle = .overCurrentContext
+    private func showLoginBottomSheet(){ // Ao toque, executa esse bloco de código...
+        let loginBottomSheet = LoginBottomSheetViewController() // cria a view de login bottom sheet
+        loginBottomSheet.modalPresentationStyle = .overCurrentContext // configura sua forma de apresentação
         loginBottomSheet.modalTransitionStyle = .crossDissolve
         
-        self.present(loginBottomSheet, animated: false){
+        self.present(loginBottomSheet, animated: false){ // apresenta ela na tela
             loginBottomSheet.animateShow()
         }
     }
