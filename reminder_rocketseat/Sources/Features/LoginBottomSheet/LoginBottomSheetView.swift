@@ -9,16 +9,7 @@ import Foundation
 import UIKit
 
 class LoginBottomSheetView: UIView{
-    
-    private let handleArea: UIView = {
-        let view = UIView()
-        
-        view.backgroundColor = Colors.gray800
-        view.layer.cornerRadius = Constants.paddingLittle
-        view.translatesAutoresizingMaskIntoConstraints = false
-        
-        return view
-    }()
+    public weak var delegate: LoginBottomSheetViewDelegate?
     
     private let title: UILabel = {
         let textBox = UILabel()
@@ -30,18 +21,6 @@ class LoginBottomSheetView: UIView{
         
         return textBox
     }()
-    
-//    private let emailTextField: UITextField = {
-//        let text = UITextField()
-//        
-//        text.placeholder = "login.email.placeholder".localized
-//        text.font = Typography.input
-//        text.textColor = Colors.gray200
-//        text.borderStyle = .roundedRect
-//        text.translatesAutoresizingMaskIntoConstraints = false
-//        
-//        return text
-//    }()
     
     private let emailTextField: LoginTextField = {
         let textField = LoginTextField(title: "login.email.title".localized, placeholder: "login.email.placeholder".localized)
@@ -59,16 +38,6 @@ class LoginBottomSheetView: UIView{
         return textField
     }()
     
-//    private let passwordTextField: UITextField = {
-//        let text = UITextField()
-//        
-//        text.borderStyle = .roundedRect
-//        text.isSecureTextEntry = true
-//        text.translatesAutoresizingMaskIntoConstraints = false
-//        
-//        return text
-//    }()
-    
     private let loginButton: UIButton = {
         let button = UIButton(type: .system)
         
@@ -78,6 +47,7 @@ class LoginBottomSheetView: UIView{
         button.tintColor = Colors.gray800
         button.layer.cornerRadius = 28
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(loginButtonDidTapped), for: .touchUpInside)
         
         return button
     }()
@@ -104,7 +74,6 @@ class LoginBottomSheetView: UIView{
         self.backgroundColor = .white
         self.layer.cornerRadius = Constants.paddingSmall
         
-        self.addSubview(handleArea)
         self.addSubview(title)
         self.addSubview(emailTextField)
         self.addSubview(passwordTextField)
@@ -115,12 +84,8 @@ class LoginBottomSheetView: UIView{
     
     private func setupConstraints(){
         NSLayoutConstraint.activate([
-            handleArea.topAnchor.constraint(equalTo: self.topAnchor, constant: Constants.paddingSmall),
-            handleArea.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            handleArea.widthAnchor.constraint(equalToConstant: 40),
-            handleArea.heightAnchor.constraint(equalToConstant: 6),
             
-            title.topAnchor.constraint(equalTo: handleArea.bottomAnchor, constant: Constants.spacingMedium),
+            title.topAnchor.constraint(equalTo: self.topAnchor, constant: Constants.spacingMedium),
             title.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Constants.paddingBig),
             
             emailTextField.topAnchor.constraint(equalTo: title.bottomAnchor, constant: Constants.spacingMedium),
@@ -139,4 +104,11 @@ class LoginBottomSheetView: UIView{
         ])
     }
     
+    @objc
+    private func loginButtonDidTapped() {
+        guard let user = emailTextField.getText() else { return }
+        guard let password = passwordTextField.getText() else { return }
+        
+        delegate?.sendLoginData(user: user, password: password)
+    }
 }
