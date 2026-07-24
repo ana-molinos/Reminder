@@ -42,3 +42,6 @@ fastlane/test_output
 
 # Instruments
 *.trace
+
+# Firebase
+GoogleService-Info.plist

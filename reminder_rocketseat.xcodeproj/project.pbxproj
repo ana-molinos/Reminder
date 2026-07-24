@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		34CA410E197E4B34BC1DA056 /* Pods_reminder_rocketseat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A527FBEBF580BECDACE670F4 /* Pods_reminder_rocketseat.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		E55089A82FE0722F00BEAB1C /* reminder_rocketseat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = reminder_rocketseat.app; path = "/Users/anajm/Documents/swift/reminder_rocketseat/build/Debug-iphoneos/reminder_rocketseat.app"; sourceTree = "<absolute>"; };
+		A527FBEBF580BECDACE670F4 /* Pods_reminder_rocketseat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_reminder_rocketseat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF118CEB8D1136C6590D1174 /* Pods-reminder_rocketseat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reminder_rocketseat.release.xcconfig"; path = "Target Support Files/Pods-reminder_rocketseat/Pods-reminder_rocketseat.release.xcconfig"; sourceTree = "<group>"; };
+		D643737AE7B1628ED1C40879 /* Pods-reminder_rocketseat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reminder_rocketseat.debug.xcconfig"; path = "Target Support Files/Pods-reminder_rocketseat/Pods-reminder_rocketseat.debug.xcconfig"; sourceTree = "<group>"; };
+		E59692D83013E0160020B158 /* reminder_rocketseat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reminder_rocketseat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,16 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34CA410E197E4B34BC1DA056 /* Pods_reminder_rocketseat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A3A7DEB2934BBDABB6961FA9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D643737AE7B1628ED1C40879 /* Pods-reminder_rocketseat.debug.xcconfig */,
+				AF118CEB8D1136C6590D1174 /* Pods-reminder_rocketseat.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BD8AD984CAF829929F162024 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A527FBEBF580BECDACE670F4 /* Pods_reminder_rocketseat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E550899F2FE0722F00BEAB1C = {
 			isa = PBXGroup;
 			children = (
 				E55089AA2FE0722F00BEAB1C /* reminder_rocketseat */,
+				A3A7DEB2934BBDABB6961FA9 /* Pods */,
+				BD8AD984CAF829929F162024 /* Frameworks */,
+				E59692D83013E0160020B158 /* reminder_rocketseat.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,9 +84,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E55089BB2FE0723000BEAB1C /* Build configuration list for PBXNativeTarget "reminder_rocketseat" */;
 			buildPhases = (
+				F6C9E4804C6E3CFFA8B99ED7 /* [CP] Check Pods Manifest.lock */,
 				E55089A42FE0722F00BEAB1C /* Sources */,
 				E55089A52FE0722F00BEAB1C /* Frameworks */,
 				E55089A62FE0722F00BEAB1C /* Resources */,
+				D633A2EE6692B523A200C734 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -68,10 +98,8 @@
 				E55089AA2FE0722F00BEAB1C /* reminder_rocketseat */,
 			);
 			name = reminder_rocketseat;
-			packageProductDependencies = (
-			);
 			productName = reminder_rocketseat;
-			productReference = E55089A82FE0722F00BEAB1C /* reminder_rocketseat.app */;
+			productReference = E59692D83013E0160020B158 /* reminder_rocketseat.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -118,6 +146,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D633A2EE6692B523A200C734 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-reminder_rocketseat/Pods-reminder_rocketseat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-reminder_rocketseat/Pods-reminder_rocketseat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reminder_rocketseat/Pods-reminder_rocketseat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6C9E4804C6E3CFFA8B99ED7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-reminder_rocketseat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E55089A42FE0722F00BEAB1C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -131,11 +205,13 @@
 /* Begin XCBuildConfiguration section */
 		E55089BC2FE0723000BEAB1C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D643737AE7B1628ED1C40879 /* Pods-reminder_rocketseat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = reminder_rocketseat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -161,11 +237,13 @@
 		};
 		E55089BD2FE0723000BEAB1C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF118CEB8D1136C6590D1174 /* Pods-reminder_rocketseat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = reminder_rocketseat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -1,0 +1,80 @@
+PODS:
+  - Firebase/Auth (12.16.0):
+    - Firebase/CoreOnly
+    - FirebaseAuth (~> 12.16.0)
+  - Firebase/CoreOnly (12.16.0):
+    - FirebaseCore (~> 12.16.0)
+  - FirebaseAppCheckInterop (12.16.0)
+  - FirebaseAuth (12.16.0):
+    - FirebaseAppCheckInterop (~> 12.16.0)
+    - FirebaseAuthInterop (~> 12.16.0)
+    - FirebaseCore (~> 12.16.0)
+    - FirebaseCoreExtension (~> 12.16.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 8.1)
+    - GoogleUtilities/Environment (~> 8.1)
+    - GTMSessionFetcher/Core (< 6.0, >= 3.4)
+    - RecaptchaInterop (~> 101.0)
+  - FirebaseAuthInterop (12.16.0)
+  - FirebaseCore (12.16.0):
+    - FirebaseCoreInternal (~> 12.16.0)
+    - GoogleUtilities/Environment (~> 8.1)
+    - GoogleUtilities/Logger (~> 8.1)
+  - FirebaseCoreExtension (12.16.0):
+    - FirebaseCore (~> 12.16.0)
+  - FirebaseCoreInternal (12.16.0):
+    - "GoogleUtilities/NSData+zlib (~> 8.1)"
+  - GoogleUtilities/AppDelegateSwizzler (8.1.2):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Environment (8.1.2):
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Logger (8.1.2):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Network (8.1.2):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Privacy
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (8.1.2)":
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Privacy (8.1.2)
+  - GoogleUtilities/Reachability (8.1.2):
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Privacy
+  - GTMSessionFetcher/Core (5.3.0)
+  - RecaptchaInterop (101.0.0)
+
+DEPENDENCIES:
+  - Firebase/Auth
+
+SPEC REPOS:
+  trunk:
+    - Firebase
+    - FirebaseAppCheckInterop
+    - FirebaseAuth
+    - FirebaseAuthInterop
+    - FirebaseCore
+    - FirebaseCoreExtension
+    - FirebaseCoreInternal
+    - GoogleUtilities
+    - GTMSessionFetcher
+    - RecaptchaInterop
+
+SPEC CHECKSUMS:
+  Firebase: 17acd6b5a2cf74fd1f2a78c1d4deeb63e2ff9b86
+  FirebaseAppCheckInterop: e32234234d803f8a237e4e5268094f55ee35b159
+  FirebaseAuth: aea1b2b66a2af572cd0691d0c38dd23297c86251
+  FirebaseAuthInterop: 080c44b24a9ef0aee43582e3ae027ecabb9ea3de
+  FirebaseCore: 551d22e19313c75007905c2b03d122a9b3fa7ddc
+  FirebaseCoreExtension: fc1cc4a827871abab0591efc610e9c8d63dbff2d
+  FirebaseCoreInternal: 289ac2e89edd981ee41b9da43d3dee590c0c5bfe
+  GoogleUtilities: 766ace00c6b10d8148408f329d10c4f051931850
+  GTMSessionFetcher: 127211aeec0b1e904fc49f4f6f895dcc535b0ecf
+  RecaptchaInterop: 11e0b637842dfb48308d242afc3f448062325aba
+
+PODFILE CHECKSUM: 57755f9fa9428f755efa9511c5a4d92424bf3951
+
+COCOAPODS: 1.17.0
