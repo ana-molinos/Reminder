@@ -78,6 +78,7 @@ class LoginTextField: UIView{
     }
     
     public func getText() -> String? {
-        return textField.text
+        let text = textField.text ?? ""
+        return text.isEmpty ? nil : text
     }
 }
