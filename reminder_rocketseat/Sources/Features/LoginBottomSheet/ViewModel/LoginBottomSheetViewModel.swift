@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+class LoginBottomSheetViewModel {
+    func doAuth(username: String, password: String){
+        print("username: " + username)
+    }
+}
