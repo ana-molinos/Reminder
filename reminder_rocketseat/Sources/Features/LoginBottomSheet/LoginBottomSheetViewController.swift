@@ -12,8 +12,19 @@ class LoginBottomSheetViewController: UIViewController {
     
     let loginView = LoginBottomSheetView()
     let viewModel = LoginBottomSheetViewModel()
+    public weak var coordinatorDelegate: LoginBottomSheetCoordinatorDelegate?
     
     var handleAreaHeight: CGFloat = 50.0
+    
+    init(coordinatorDelegate: LoginBottomSheetCoordinatorDelegate) {
+        self.coordinatorDelegate = coordinatorDelegate
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     // MARK: - View lifecycle
     override func viewDidLoad() {
@@ -47,7 +58,7 @@ class LoginBottomSheetViewController: UIViewController {
     /// Configura a closure da viewModel para ela saber o que fazer quando essa variávei for acionada
     private func bindViewModel() {
         viewModel.succesResult = { [weak self] in
-            print("Chegou na vc!")
+            self?.coordinatorDelegate?.navigateToHome()
         }
     }
     

@@ -10,7 +10,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var coordinator: ReminderCoordinator?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
@@ -18,11 +18,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         
-        // Amarra a navegação no controller
-        let navigation = UINavigationController(rootViewController: SplashViewController())
+        coordinator = ReminderCoordinator()
+        let rootViewController = coordinator?.start()
         
         // Amarra a window na navegação
-        window.rootViewController = navigation
+        window.rootViewController = rootViewController
         self.window = window
         window.makeKeyAndVisible()
     }

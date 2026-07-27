@@ -11,6 +11,17 @@ import UIKit
 // Essa classe herda de UIViewController
 class SplashViewController: UIViewController {
     let contentView = SplashView()
+    public weak var coordinatorDelegate: SplashCoordinatorDelegate?
+    
+    init(coordinatorDelegate: SplashCoordinatorDelegate) {
+        self.coordinatorDelegate = coordinatorDelegate
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     // MARK: - Ciclo de vida da tela
     
@@ -49,12 +60,6 @@ class SplashViewController: UIViewController {
     
     @objc
     private func showLoginBottomSheet(){ // Ao toque, executa esse bloco de código...
-        let loginBottomSheet = LoginBottomSheetViewController() // cria a view de login bottom sheet
-        loginBottomSheet.modalPresentationStyle = .overCurrentContext // configura sua forma de apresentação
-        loginBottomSheet.modalTransitionStyle = .crossDissolve
-        
-        self.present(loginBottomSheet, animated: false){ // apresenta ela na tela
-            loginBottomSheet.animateShow()
-        }
+        coordinatorDelegate?.openLoginBottomSheet()
     }
 }
