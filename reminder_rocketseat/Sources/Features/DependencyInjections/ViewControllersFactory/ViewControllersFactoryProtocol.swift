@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+protocol ViewControllersFactoryProtocol: AnyObject {
+    func makeSplashViewController(coordinator: SplashCoordinatorDelegate) -> SplashViewController
+    func makeLoginBottomSheetViewController(coordinator: LoginBottomSheetCoordinatorDelegate) -> LoginBottomSheetViewController
+}
