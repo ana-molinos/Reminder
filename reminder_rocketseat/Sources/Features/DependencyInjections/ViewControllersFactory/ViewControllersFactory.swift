@@ -6,15 +6,18 @@
 //
 
 import Foundation
+import UIKit
 
 final class ViewControllersFactory: ViewControllersFactoryProtocol {
     func makeSplashViewController(coordinator: any SplashCoordinatorDelegate) -> SplashViewController {
-        let viewController = SplashViewController(coordinatorDelegate: coordinator)
+        let contentView = SplashView()
+        let viewController = SplashViewController(contentView: contentView, coordinatorDelegate: coordinator)
         return viewController
     }
     
     func makeLoginBottomSheetViewController(coordinator: any LoginBottomSheetCoordinatorDelegate) -> LoginBottomSheetViewController {
-        let viewController = LoginBottomSheetViewController(coordinatorDelegate: coordinator)
+        let contentView = LoginBottomSheetView()
+        let viewController = LoginBottomSheetViewController(contentView: contentView, coordinatorDelegate: coordinator)
         return viewController
     }
 }

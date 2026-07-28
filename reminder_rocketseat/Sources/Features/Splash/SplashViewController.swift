@@ -10,10 +10,11 @@ import UIKit
 
 // Essa classe herda de UIViewController
 class SplashViewController: UIViewController {
-    let contentView = SplashView()
+    let contentView: SplashView
     public weak var coordinatorDelegate: SplashCoordinatorDelegate?
     
-    init(coordinatorDelegate: SplashCoordinatorDelegate) {
+    init(contentView: SplashView, coordinatorDelegate: SplashCoordinatorDelegate) {
+        self.contentView = contentView
         self.coordinatorDelegate = coordinatorDelegate
         
         super.init(nibName: nil, bundle: nil)
