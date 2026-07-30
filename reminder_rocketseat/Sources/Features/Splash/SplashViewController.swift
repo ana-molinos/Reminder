@@ -33,6 +33,14 @@ class SplashViewController: UIViewController {
         
     } // Chamada após a view do controler ter sido carregada em memória (primeira coisa que aparece)
     
+    private func decideNavigationFlow() {
+        if let user = UserDefaultsManager.loadUser(), user.isUserSaved {
+            self.coordinatorDelegate?.navigateToHome()
+        } else {
+            self.showLoginBottomSheet()
+        }
+    }
+    
     private func setup(){
         self.view.backgroundColor = Colors.redBase
         self.view.addSubview(contentView)

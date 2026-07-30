@@ -58,9 +58,32 @@ class LoginBottomSheetViewController: UIViewController {
     
     /// Configura a closure da viewModel para ela saber o que fazer quando essa variávei for acionada
     private func bindViewModel() {
-        viewModel.succesResult = { [weak self] in
-            self?.coordinatorDelegate?.navigateToHome()
+        viewModel.succesResult = { [weak self] username in
+            
+            self?.presentSaveLoginAlert(email: username)
         }
+    }
+    
+    private func presentSaveLoginAlert(email: String) {
+        let alertController = UIAlertController(title: "Salvar acesso",
+                                                message: "Deseja salvar seu acesso?",
+                                                preferredStyle: .alert)
+        
+        let saveAction = UIAlertAction(title: "Salvar",
+                                       style: .default) { _ in
+            let user = User(email: email, isUserSaved: true)
+            UserDefaultsManager.saveUser(user: user)
+            self.coordinatorDelegate?.navigateToHome()
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancelar",
+                                         style: .cancel) { _ in
+            self.coordinatorDelegate?.navigateToHome()
+        }
+        
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true)
     }
     
     private func setupGesture(){

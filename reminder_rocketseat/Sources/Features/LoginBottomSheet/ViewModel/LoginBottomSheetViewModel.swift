@@ -10,7 +10,7 @@ import Firebase
 
 class LoginBottomSheetViewModel {
     
-    var succesResult: (() -> Void)?
+    var succesResult: ((String) -> Void)?
     /// "variável que retorna um bloco de código"
     
     func doAuth(username: String, password: String){
@@ -20,7 +20,7 @@ class LoginBottomSheetViewModel {
             if let error = error {
                 print("Falha na autenticação: \(error)")
             } else {
-                self?.succesResult?()
+                self?.succesResult?(username)
             }
         }
     }
