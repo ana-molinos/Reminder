@@ -30,6 +30,7 @@ class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad() // construtor da classe pai
         setup()
+        startAnimation()
         
     } // Chamada após a view do controler ter sido carregada em memória (primeira coisa que aparece)
     
@@ -43,6 +44,7 @@ class SplashViewController: UIViewController {
     
     private func setup(){
         self.view.backgroundColor = Colors.redBase
+        self.navigationController?.navigationBar.isHidden = true
         self.view.addSubview(contentView)
         
         setupConstraints()
@@ -69,6 +71,30 @@ class SplashViewController: UIViewController {
     
     @objc
     private func showLoginBottomSheet(){ // Ao toque, executa esse bloco de código...
+        animateLogoUp()
         coordinatorDelegate?.openLoginBottomSheet()
+    }
+}
+
+// MARK: - Animations
+extension SplashViewController{
+    private func startAnimation() {
+        UIView.animate(withDuration: 1.5,
+                       delay: 0.0,
+                       animations: {
+            self.contentView.logoImageView.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+        },
+                        completion: { _ in
+            self.decideNavigationFlow()
+        })
+    }
+    
+    private func animateLogoUp() {
+        UIView.animate(withDuration: 0.2,
+                       delay: 0.0,
+                       options: [.curveEaseOut],
+                       animations: {
+            self.contentView.logoImageView.transform = self.contentView.logoImageView.transform.translatedBy(x: 0, y: -150)
+        })
     }
 }
