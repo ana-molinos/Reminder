@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class ReminderCoordinator{
+class AppCoordinator{
     // MARK: - Properties
     private var navigationController: UINavigationController?
     private let viewControllerFactory = ViewControllersFactory()
@@ -29,7 +29,7 @@ class ReminderCoordinator{
 }
 
 // MARK: - Login
-extension ReminderCoordinator: LoginBottomSheetCoordinatorDelegate {
+extension AppCoordinator: LoginBottomSheetCoordinatorDelegate {
     func navigateToHome() {
         let viewController = UIViewController()
         viewController.view.backgroundColor = .green
@@ -40,7 +40,7 @@ extension ReminderCoordinator: LoginBottomSheetCoordinatorDelegate {
 }
 
 // MARK: - Splash
-extension ReminderCoordinator: SplashCoordinatorDelegate {
+extension AppCoordinator: SplashCoordinatorDelegate {
     func openLoginBottomSheet() {
         let loginBottomSheet = viewControllerFactory.makeLoginBottomSheetViewController(coordinator: self) // cria a view de login bottom sheet
         loginBottomSheet.modalPresentationStyle = .overCurrentContext // configura sua forma de apresentação
