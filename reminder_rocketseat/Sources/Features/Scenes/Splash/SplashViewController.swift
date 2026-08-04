@@ -52,16 +52,7 @@ class SplashViewController: UIViewController {
     }
     
     private func setupConstraints() {
-        // Ancora da splash fica alinhada com a ancora da view do VC
-        NSLayoutConstraint.activate([
-            contentView.topAnchor.constraint(equalTo: view.topAnchor),
-            contentView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            contentView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            contentView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
-        
-        contentView.translatesAutoresizingMaskIntoConstraints = false
-        // todas as propriedades precisam ter essa flag desmarcada para não serem interpretadas como um story board
+        setupContentViewToBounds(contentView: self.contentView)
     }
     
     private func setupGesture(){
