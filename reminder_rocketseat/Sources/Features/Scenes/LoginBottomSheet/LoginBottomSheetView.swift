@@ -85,18 +85,18 @@ class LoginBottomSheetView: UIView{
     private func setupConstraints(){
         NSLayoutConstraint.activate([
             
-            title.topAnchor.constraint(equalTo: self.topAnchor, constant: Constants.spacingMedium),
+            title.topAnchor.constraint(equalTo: self.topAnchor, constant: Constants.spacingBig),
             title.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Constants.paddingBig),
             
-            emailTextField.topAnchor.constraint(equalTo: title.bottomAnchor, constant: Constants.spacingMedium),
+            emailTextField.topAnchor.constraint(equalTo: title.bottomAnchor, constant: Constants.spacingBig),
             emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Constants.paddingBig),
             emailTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -Constants.paddingBig),
             
-            passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: Constants.spacingSmall),
+            passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: Constants.spacingMedium),
             passwordTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Constants.paddingBig),
             passwordTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -Constants.paddingBig),
             
-            loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: Constants.spacingMedium),
+            loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: Constants.spacingBig),
             loginButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Constants.paddingBig),
             loginButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -Constants.paddingBig),
             loginButton.heightAnchor.constraint(equalToConstant: Constants.dimensionMedium)

@@ -69,7 +69,7 @@ class LoginTextField: UIView{
             titleLabel.topAnchor.constraint(equalTo: self.topAnchor),
             titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             
-            textField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Constants.spacingLittle),
+            textField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Constants.spacingSmall),
             textField.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             textField.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             textField.heightAnchor.constraint(equalToConstant: Constants.dimensionMedium),

@@ -16,7 +16,7 @@ class HomeViewController: UIViewController {
         self.contentView = contentView
         self.coordinatorDelegate = coordinatorDelegate
         
-        super.init()
+        super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -31,10 +31,12 @@ class HomeViewController: UIViewController {
     }
     
     private func setupBindView() {
-        self.view = contentView
+        
     }
     
     private func setup() {
+        self.view.addSubview(contentView)
+        self.view.backgroundColor = Colors.gray600
         buildHierarchy()
     }
     

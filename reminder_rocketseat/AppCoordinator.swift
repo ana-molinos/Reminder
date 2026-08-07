@@ -31,8 +31,7 @@ class AppCoordinator{
 // MARK: - Login
 extension AppCoordinator: LoginBottomSheetCoordinatorDelegate {
     func navigateToHome() {
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = .green
+        let viewController = viewControllerFactory.makeHomeViewController(coordinator: self)
         
         self.navigationController?.dismiss(animated: true)
         self.navigationController?.pushViewController(viewController, animated: true)
@@ -50,4 +49,9 @@ extension AppCoordinator: SplashCoordinatorDelegate {
             loginBottomSheet.animateShow()
         }
     }
+}
+
+// MARK: - Home
+extension AppCoordinator: HomeCoordinatorDelegate {
+    
 }

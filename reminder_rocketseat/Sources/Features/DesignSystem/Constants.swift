@@ -22,8 +22,14 @@ public struct Constants {
     static let dimensionMedium: CGFloat = 56
     
     // MARK: - Spacing constants
-    static let spacingBig: CGFloat = 48
-    static let spacingMedium: CGFloat = 40
-    static let spacingSmall: CGFloat = 20
+    static let spacingHuge: CGFloat = 48
+    static let spacingBig: CGFloat = 40
+    static let spacingMedium: CGFloat = 32
+    static let spacingSmall: CGFloat = 16
     static let spacingLittle: CGFloat = 12
+    static let spacingTiny: CGFloat = 4
+    
+    // MARK: Corner radius constants
+    static let cornerRadiosMedium: CGFloat = 28
+    static let cornerRadiusSmall: CGFloat = 24
 }

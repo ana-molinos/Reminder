@@ -14,6 +14,9 @@
 "login.button.title" = "Entrar";
 
 // MARK: - HOME Screen
+"home.label.title" = "Boas vindas";
+"home.label.username" = "Julio Santana";
+"home.evaluation.button.label" = "Avaliar";
 
 // MARK: - RECEIPTS Screen
 
